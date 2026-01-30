@@ -1,0 +1,3 @@
+/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/kampad.dir
+/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/edit_cache.dir
+/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/rebuild_cache.dir
