@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hfa/Desktop/workspace/Kampad/build
+CMAKE_SOURCE_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hfa/Desktop/workspace/Kampad/build
+CMAKE_BINARY_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/kampad.dir/depend.make
@@ -72,80 +72,79 @@ include CMakeFiles/kampad.dir/flags.make
 CMakeFiles/kampad.dir/codegen:
 .PHONY : CMakeFiles/kampad.dir/codegen
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: CMakeFiles/kampad.dir/flags.make
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/Desktop/workspace/Kampad/app/main.c
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o -MF CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o.d -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o -c /home/hfa/Desktop/workspace/Kampad/app/main.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o: CMakeFiles/kampad.dir/flags.make
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o: /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o -MF CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o.d -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o -c /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hfa/Desktop/workspace/Kampad/app/main.c > CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.i
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c > CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hfa/Desktop/workspace/Kampad/app/main.c -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.s
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o: CMakeFiles/kampad.dir/flags.make
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o: /home/hfa/Desktop/workspace/Kampad/src/terminal.c
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o -MF CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o.d -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o -c /home/hfa/Desktop/workspace/Kampad/src/terminal.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o: CMakeFiles/kampad.dir/flags.make
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o: /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o -MF CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o.d -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o -c /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hfa/Desktop/workspace/Kampad/src/terminal.c > CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.i
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c > CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hfa/Desktop/workspace/Kampad/src/terminal.c -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.s
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o: CMakeFiles/kampad.dir/flags.make
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o: /home/hfa/Desktop/workspace/Kampad/src/keymapping.c
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o -MF CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o.d -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o -c /home/hfa/Desktop/workspace/Kampad/src/keymapping.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o: CMakeFiles/kampad.dir/flags.make
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o: /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o -MF CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o.d -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o -c /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hfa/Desktop/workspace/Kampad/src/keymapping.c > CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c > CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hfa/Desktop/workspace/Kampad/src/keymapping.c -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o: CMakeFiles/kampad.dir/flags.make
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o: /home/hfa/Desktop/workspace/Kampad/src/new_file.c
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o -MF CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o.d -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o -c /home/hfa/Desktop/workspace/Kampad/src/new_file.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o: CMakeFiles/kampad.dir/flags.make
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o: /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o: CMakeFiles/kampad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o -MF CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o.d -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o -c /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hfa/Desktop/workspace/Kampad/src/new_file.c > CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.i
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c > CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i
 
-CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hfa/Desktop/workspace/Kampad/src/new_file.c -o CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.s
+CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c -o CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s
 
 # Object files for target kampad
 kampad_OBJECTS = \
-"CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o" \
-"CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o" \
-"CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o" \
-"CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o"
+"CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o" \
+"CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o" \
+"CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o" \
+"CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o"
 
 # External object files for target kampad
 kampad_EXTERNAL_OBJECTS =
 
-kampad: CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
-kampad: CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/terminal.c.o
-kampad: CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o
-kampad: CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/new_file.c.o
+kampad: CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o
+kampad: CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o
+kampad: CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o
+kampad: CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o
 kampad: CMakeFiles/kampad.dir/build.make
-kampad: CMakeFiles/kampad.dir/compiler_depend.ts
 kampad: CMakeFiles/kampad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable kampad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable kampad"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kampad.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -157,6 +156,6 @@ CMakeFiles/kampad.dir/clean:
 .PHONY : CMakeFiles/kampad.dir/clean
 
 CMakeFiles/kampad.dir/depend:
-	cd /home/hfa/Desktop/workspace/Kampad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hfa/Desktop/workspace/Kampad/build /home/hfa/Desktop/workspace/Kampad/build /home/hfa/Desktop/workspace/Kampad/build /home/hfa/Desktop/workspace/Kampad/build /home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/kampad.dir/DependInfo.cmake "--color=$(COLOR)" kampad
+	cd /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles/kampad.dir/DependInfo.cmake "--color=$(COLOR)" kampad
 .PHONY : CMakeFiles/kampad.dir/depend
 

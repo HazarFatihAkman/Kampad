@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E rm -f
+RM = /opt/homebrew/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hfa/Desktop/workspace/Kampad/build
+CMAKE_SOURCE_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hfa/Desktop/workspace/Kampad/build
+CMAKE_BINARY_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/kampad.dir/clean
 CMakeFiles/kampad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target kampad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target kampad"
 .PHONY : CMakeFiles/kampad.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/kampad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hfa/Desktop/workspace/Kampad/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kampad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hfa/Desktop/workspace/Kampad/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles 0
 .PHONY : CMakeFiles/kampad.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ kampad: CMakeFiles/kampad.dir/rule
 # codegen rule for target.
 CMakeFiles/kampad.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target kampad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target kampad"
 .PHONY : CMakeFiles/kampad.dir/codegen
 
 # clean rule for target.

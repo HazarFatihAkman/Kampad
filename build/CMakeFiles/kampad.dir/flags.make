@@ -6,5 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = 
 
-C_FLAGS = 
+C_FLAGSarm64 =  -arch arm64
+
+C_FLAGS =  -arch arm64
 

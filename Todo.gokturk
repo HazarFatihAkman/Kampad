@@ -1,0 +1,8 @@
+>> -c = create_flag
+
+>> ./kampad -c [new_filename]
+
+>> if not -c flag, open file
+>> ./kampad [filename]
+
+

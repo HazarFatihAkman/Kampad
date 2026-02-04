@@ -1,29 +1,20 @@
 #include "../include/keymapping.h"
-#include "../include/terminal.h"
-#include "../include/new_file.h"
+#include "../include/input.h"
+#include "../include/flags.h"
 
 #include <stdio.h>
 #include <unistd.h>
 
-struct termios oldt, newt;
 char keymapping[KEYMAPPING_SIZE];
+flag_t flag = {0};
 
-int main(int argv, char *args[]) {
+int main(int argv, const char *args[]) {
   printf("Welcome Kampad!\n");
-  char *file_name = args[1];
-  if (file_name == NULL) {
-    printf("Nothing selected\n");
-  }
-  else {
-    printf("%s\n", file_name);
-  }
-
   set_keymapping();
-  // print_keymapping(); 
-
-  enableRawMode();
+  init_flag(&flag, args);
+  printf("FLAG: %s\nFILENAME: %s\n", flag.mode, flag.filename);
   char c;
-  while (read(STDIN_FILENO, &c, 1) == 1 && c != keymapping[0]);
+  while((c = gchar()) != keymapping[0]) printf("user input : %c\n", c);
 
   return 0;
 }
