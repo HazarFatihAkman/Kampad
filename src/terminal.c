@@ -1,31 +1,20 @@
 #include "../include/terminal.h"
-
+#include <stdlib.h>
 #include <termios.h>
 #include <unistd.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <stdlib.h>
-#include <errno.h>
 
-int getch(struct termios oldt, struct termios newt) {
-  int ch;
-  tcgetattr(STDIN_FILENO, &oldt);
-  newt = oldt;
-  newt.c_cflag &= ~(ICANON | ECHO);
-  tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-  ch = getchar();
-  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-  return ch;
+struct termios orig_termios;
+
+void enableRawMode() {
+  tcgetattr(STDIN_FILENO, &orig_termios);
+  atexit(disableRawMode);
+
+  struct termios raw = orig_termios;
+  raw.c_cflag &= ~(ECHO | ICANON);
+
+  tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
 }
 
-char *getstr(struct termios oldt, struct termios newt) {
-  char *str = (char*) malloc(1024);
-  tcgetattr(STDIN_FILENO, &oldt);
-  newt = oldt;
-  newt.c_cflag &= ~(ICANON | ECHO);
-  tcsetattr(STDIN_FILENO, TCSANOW, &newt); 
-  //TODO : it doesn't set the value of terminal
-  fgets(str, 1024, stdin);
-  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-  return str;
+void disableRawMode() {
+  tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
 }

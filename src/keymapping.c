@@ -18,9 +18,9 @@ void set_keymapping(void) {
 
 // enum | key
 #define KEYMAPPING_FORMAT "| %s %c "
-void print_keymapping(void) {
-  for (int i = 0; i < KEYMAPPING_SIZE; i++) {
-    printf(KEYMAPPING_FORMAT, KEYMAP_STRS[i], keymapping[i]);
-  }
-}
+// void print_keymapping(void) {
+//   for (int i = 0; i < KEYMAPPING_SIZE; i++) {
+//     printf(KEYMAPPING_FORMAT, KEYMAP_STRS[i], keymapping[i]);
+//   }
+// }
 

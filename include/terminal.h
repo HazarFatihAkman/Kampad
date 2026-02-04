@@ -3,8 +3,8 @@
 
 #include <termios.h>
 
-int getch(struct termios oldt, struct termios newt);
-char *getstr(struct termios oldt, struct termios newt);
+void enableRawMode();
+void disableRawMode();
 
 #endif //KAMPAD_TERMINAL_H
 
