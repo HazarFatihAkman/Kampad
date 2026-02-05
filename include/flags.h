@@ -2,7 +2,7 @@
 #define KAMPAD_FLAGS_H
 
 #define CREATE_FLAG "-c"
-#define EDIT_FLAG   "-m"
+#define MODIFY_FLAG   "-m"
 
 typedef struct flag {
   char mode[2];
@@ -12,3 +12,4 @@ typedef struct flag {
 void init_flag(flag_t *flag, const char *args[]);
 
 #endif // KAMPAD_FLAGS_H
+

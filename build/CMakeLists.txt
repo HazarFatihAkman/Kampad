@@ -7,5 +7,6 @@ add_executable(kampad ../app/main.c
   ../src/keymapping.c
   ../src/input.c
   ../src/flags.c
+  ../src/files.c
 )
 

@@ -153,6 +153,30 @@ Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s
 .PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s
 
+Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o
+.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.o
+
+# target to build an object file
+Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o
+.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o
+
+Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.i: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i
+.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.i
+
+# target to preprocess a source file
+Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i
+.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i
+
+Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.s: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s
+.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.s
+
+# target to generate assembly for a file
+Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s
+.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s
+
 Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o
 .PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.o"
 	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.i"
 	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.s"
+	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.o"
+	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.i"
+	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.s"
 	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.o"
 	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.i"
 	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.s"
