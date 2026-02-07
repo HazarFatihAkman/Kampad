@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build
+CMAKE_SOURCE_DIR = /home/hfa/Desktop/workspace/Kampad/build
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build
+CMAKE_BINARY_DIR = /home/hfa/Desktop/workspace/Kampad/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/homebrew/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hfa/Desktop/workspace/Kampad/build/CMakeFiles /home/hfa/Desktop/workspace/Kampad/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hfa/Desktop/workspace/Kampad/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,125 +129,149 @@ kampad/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/build
 .PHONY : kampad/fast
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.o
+home/hfa/Desktop/workspace/Kampad/app/main.o: home/hfa/Desktop/workspace/Kampad/app/main.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/app/main.o
 
 # target to build an object file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.o
+home/hfa/Desktop/workspace/Kampad/app/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/app/main.c.o
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.i: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.i
+home/hfa/Desktop/workspace/Kampad/app/main.i: home/hfa/Desktop/workspace/Kampad/app/main.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/app/main.i
 
 # target to preprocess a source file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.i
+home/hfa/Desktop/workspace/Kampad/app/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/app/main.c.i
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.s: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.s
+home/hfa/Desktop/workspace/Kampad/app/main.s: home/hfa/Desktop/workspace/Kampad/app/main.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/app/main.s
 
 # target to generate assembly for a file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.c.s
+home/hfa/Desktop/workspace/Kampad/app/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/app/main.c.s
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.o
+home/hfa/Desktop/workspace/Kampad/src/buffer.o: home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/buffer.o
 
 # target to build an object file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.o
+home/hfa/Desktop/workspace/Kampad/src/buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.i: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.i
+home/hfa/Desktop/workspace/Kampad/src/buffer.i: home/hfa/Desktop/workspace/Kampad/src/buffer.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/buffer.i
 
 # target to preprocess a source file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.i
+home/hfa/Desktop/workspace/Kampad/src/buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/buffer.c.i
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.s: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.s
+home/hfa/Desktop/workspace/Kampad/src/buffer.s: home/hfa/Desktop/workspace/Kampad/src/buffer.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/buffer.s
 
 # target to generate assembly for a file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.c.s
+home/hfa/Desktop/workspace/Kampad/src/buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/buffer.c.s
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.o
+home/hfa/Desktop/workspace/Kampad/src/files.o: home/hfa/Desktop/workspace/Kampad/src/files.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/files.o
 
 # target to build an object file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.o
+home/hfa/Desktop/workspace/Kampad/src/files.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/files.c.o
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.i: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.i
+home/hfa/Desktop/workspace/Kampad/src/files.i: home/hfa/Desktop/workspace/Kampad/src/files.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/files.i
 
 # target to preprocess a source file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.i
+home/hfa/Desktop/workspace/Kampad/src/files.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/files.c.i
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.s: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.s
+home/hfa/Desktop/workspace/Kampad/src/files.s: home/hfa/Desktop/workspace/Kampad/src/files.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/files.s
 
 # target to generate assembly for a file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.c.s
+home/hfa/Desktop/workspace/Kampad/src/files.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/files.c.s
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.o
+home/hfa/Desktop/workspace/Kampad/src/flags.o: home/hfa/Desktop/workspace/Kampad/src/flags.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/flags.o
 
 # target to build an object file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.o
+home/hfa/Desktop/workspace/Kampad/src/flags.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/flags.c.o
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.i: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.i
+home/hfa/Desktop/workspace/Kampad/src/flags.i: home/hfa/Desktop/workspace/Kampad/src/flags.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/flags.i
 
 # target to preprocess a source file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.i
+home/hfa/Desktop/workspace/Kampad/src/flags.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/flags.c.i
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.s: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.s
+home/hfa/Desktop/workspace/Kampad/src/flags.s: home/hfa/Desktop/workspace/Kampad/src/flags.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/flags.s
 
 # target to generate assembly for a file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.c.s
+home/hfa/Desktop/workspace/Kampad/src/flags.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/flags.c.s
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.o: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.o
+home/hfa/Desktop/workspace/Kampad/src/input.o: home/hfa/Desktop/workspace/Kampad/src/input.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/input.o
 
 # target to build an object file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.o
+home/hfa/Desktop/workspace/Kampad/src/input.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/input.c.o
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.i: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.i
+home/hfa/Desktop/workspace/Kampad/src/input.i: home/hfa/Desktop/workspace/Kampad/src/input.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/input.i
 
 # target to preprocess a source file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.i
+home/hfa/Desktop/workspace/Kampad/src/input.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/input.c.i
 
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.s: Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.s
+home/hfa/Desktop/workspace/Kampad/src/input.s: home/hfa/Desktop/workspace/Kampad/src/input.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/input.s
 
 # target to generate assembly for a file
-Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s
-.PHONY : Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.c.s
+home/hfa/Desktop/workspace/Kampad/src/input.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/input.c.s
+
+home/hfa/Desktop/workspace/Kampad/src/keymapping.o: home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/keymapping.o
+
+# target to build an object file
+home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o
+
+home/hfa/Desktop/workspace/Kampad/src/keymapping.i: home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/keymapping.i
+
+# target to preprocess a source file
+home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/keymapping.c.i
+
+home/hfa/Desktop/workspace/Kampad/src/keymapping.s: home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/keymapping.s
+
+# target to generate assembly for a file
+home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kampad.dir/build.make CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s
+.PHONY : home/hfa/Desktop/workspace/Kampad/src/keymapping.c.s
 
 # Help Target
 help:
@@ -258,21 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kampad"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.o"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.i"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/app/main.s"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.o"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.i"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/files.s"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.o"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.i"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/flags.s"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.o"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.i"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/input.s"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.o"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.i"
-	@echo "... Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/src/keymapping.s"
+	@echo "... home/hfa/Desktop/workspace/Kampad/app/main.o"
+	@echo "... home/hfa/Desktop/workspace/Kampad/app/main.i"
+	@echo "... home/hfa/Desktop/workspace/Kampad/app/main.s"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/buffer.o"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/buffer.i"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/buffer.s"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/files.o"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/files.i"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/files.s"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/flags.o"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/flags.i"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/flags.s"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/input.o"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/input.i"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/input.s"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/keymapping.o"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/keymapping.i"
+	@echo "... home/hfa/Desktop/workspace/Kampad/src/keymapping.s"
 .PHONY : help
 
 

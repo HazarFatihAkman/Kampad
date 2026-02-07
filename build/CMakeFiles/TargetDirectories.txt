@@ -1,3 +1,3 @@
-/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles/kampad.dir
-/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles/edit_cache.dir
-/Users/hazarfatihakman/Documents/repos/hazarfatihakman/Kampad/build/CMakeFiles/rebuild_cache.dir
+/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/kampad.dir
+/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/edit_cache.dir
+/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles/rebuild_cache.dir
