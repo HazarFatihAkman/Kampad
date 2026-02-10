@@ -8,7 +8,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
  /home/hfa/Desktop/workspace/Kampad/include/flags.h
  /home/hfa/Desktop/workspace/Kampad/include/input.h
  /home/hfa/Desktop/workspace/Kampad/include/keymapping.h
- /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
  /usr/include/asm/errno.h
@@ -33,7 +32,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
  /usr/include/bits/stdint-least.h
  /usr/include/bits/stdint-uintn.h
  /usr/include/bits/stdio_lim.h
- /usr/include/bits/stdlib-float.h
  /usr/include/bits/struct_mutex.h
  /usr/include/bits/struct_rwlock.h
  /usr/include/bits/termios-baud.h
@@ -69,8 +67,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
  /usr/include/bits/typesizes.h
  /usr/include/bits/uintn-identity.h
  /usr/include/bits/unistd_ext.h
- /usr/include/bits/waitflags.h
- /usr/include/bits/waitstatus.h
  /usr/include/bits/wchar.h
  /usr/include/bits/wordsize.h
  /usr/include/curses.h
@@ -85,7 +81,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
  /usr/include/stdc-predef.h
  /usr/include/stdint.h
  /usr/include/stdio.h
- /usr/include/stdlib.h
  /usr/include/sys/cdefs.h
  /usr/include/sys/select.h
  /usr/include/sys/ttydefaults.h

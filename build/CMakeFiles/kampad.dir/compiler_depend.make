@@ -7,7 +7,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /home/hfa/Desktop/workspace/Kampad/include/flags.h \
   /home/hfa/Desktop/workspace/Kampad/include/input.h \
   /home/hfa/Desktop/workspace/Kampad/include/keymapping.h \
-  /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \
@@ -32,7 +31,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
   /usr/include/bits/termios-baud.h \
@@ -68,8 +66,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
   /usr/include/bits/unistd_ext.h \
-  /usr/include/bits/waitflags.h \
-  /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/curses.h \
@@ -84,7 +80,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
-  /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/ttydefaults.h \
@@ -398,11 +393,19 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.o:
 
 /home/hfa/Desktop/workspace/Kampad/src/flags.c:
 
+/usr/include/bits/waitflags.h:
+
+/usr/include/alloca.h:
+
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
 
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 
@@ -432,12 +435,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 
 /usr/include/bits/wchar.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
-
-/usr/include/bits/waitstatus.h:
-
-/usr/include/bits/waitflags.h:
-
 /usr/include/bits/unistd_ext.h:
 
 /usr/include/bits/uintn-identity.h:
@@ -448,13 +445,7 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 
 /usr/include/bits/types/timer_t.h:
 
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/bits/types/struct_FILE.h:
-
 /home/hfa/Desktop/workspace/Kampad/include/files.h:
-
-/usr/include/alloca.h:
 
 /home/hfa/Desktop/workspace/Kampad/src/files.c:
 
@@ -485,6 +476,16 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/floatn.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/bits/timesize.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/bits/getopt_posix.h:
 
@@ -519,16 +520,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o:
 /home/hfa/Desktop/workspace/Kampad/include/flags.h:
 
 /usr/include/bits/confname.h:
-
-/usr/include/bits/posix_opt.h:
-
-/usr/include/asm/errno.h:
-
-/usr/include/bits/timesize.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/bits/byteswap.h:
 
@@ -570,10 +561,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o:
 
 /usr/include/bits/termios-cbaud.h:
 
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/bits/termios-misc.h:
-
 /usr/include/gnu/stubs.h:
 
 /usr/include/bits/termios-struct.h:
@@ -611,3 +598,11 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o:
 /usr/include/bits/stdint-uintn.h:
 
 /usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/termios-misc.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/bits/types/struct_FILE.h:
+
+/usr/include/bits/types/struct_timespec.h:
