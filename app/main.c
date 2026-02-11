@@ -14,14 +14,41 @@ flag_t flag = {0};
 kampad_file_t kampad_f = {0};
 struct termios orig_t;
 
-void enable_raw_mode(struct termios *orig_t) {
-  struct termios raw = *orig_t;
-  raw.c_lflag &= ~(ECHO | ICANON);
-  tcsetattr(STDIN_FILENO, TCSANOW, &raw);
+void set_raw_mode(int enable) {
+  if (enable == 1) {
+    struct termios raw = orig_t;
+    raw.c_lflag &= ~ (ICANON | ECHO);
+    raw.c_cc[VMIN] = 1;
+    raw.c_cc[VTIME] = 0;
+    tcsetattr(STDIN_FILENO, TCSANOW, &raw);
+  }
+  else {
+    tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_t);
+  }
 }
 
-void disable_raw_mode(struct termios *orig_t) {
-  tcsetattr(STDIN_FILENO, TCSAFLUSH, orig_t);
+void relocate_cursor(int row, int column) {
+  if ((row < 0 && row > kampad_f.buffer.rows.count)
+    || column < 0) {
+    return;
+  }
+
+  if (kampad_f.buffer.current_row != row && row < kampad_f.buffer.rows.count) {
+    kampad_f.buffer.current_row = row;
+    printf("\nrow %d\n", kampad_f.buffer.current_row);
+    fflush(stdout);
+    return;
+  }
+
+  rows_t rows = kampad_f.buffer.rows;
+  row_t *selected_row = (row_t*)rows.items[row];
+  if (selected_row->current_column != column && column < selected_row->current_column) {
+    selected_row->current_column = column;
+    printf("\ncolumn : %d\n", selected_row->current_column);
+    fflush(stdout);
+    kampad_f.buffer.rows = rows;
+    return;
+  }
 }
 
 int main(int argv, const char *args[]) {
@@ -35,56 +62,64 @@ int main(int argv, const char *args[]) {
 
   uint8_t insert_mode = 0;
   char c;
-  int selected_i = 0;
+
+  row_t *selected_row = {0};
+  int row = 0;
+  int column = 0;
   while(1) {
     c = gchar();
-
     if (c == 'i' && insert_mode == 0) {
-      enable_raw_mode(&orig_t);
       insert_mode = 1;
+      set_raw_mode(insert_mode);
+      row_t new_row = {
+          .index = 0,
+          .columns = 0,
+          .current_column = 0
+      };
+      push_v((void*)&new_row, &kampad_f.buffer.rows);
+      selected_row = (row_t*)kampad_f.buffer.rows.items[kampad_f.buffer.current_row];
     }
-    else if (c == 27 && insert_mode == 1) { 
+    else if (c == 27 && insert_mode == 1) {
       char seq[2];
-
       if (read(STDIN_FILENO, &seq[0], 1) == 1
-          && read(STDIN_FILENO, &seq[1], 1) == 1) {
-        if (seq[0] == 0x5B) {
-          switch (seq[1]) {
-            case 0x41: printf("UP "); break;
-            case 0x42: printf("DOWN "); break;
-            case 0x43: printf("RIGHT "); break;
-            case 0x44: printf("LEFT "); break;
-          }
+       && read(STDIN_FILENO, &seq[1], 1) == 1) {
+        switch (seq[1]) {
+          case 0x41: row = kampad_f.buffer.current_row + 1; break;
+          case 0x42: row = kampad_f.buffer.current_row - 1; break;
+          case 0x43: column = selected_row->current_column + 1; break;
+          case 0x44: column = selected_row->current_column - 1; break;
         }
-        else {
-          disable_raw_mode(&orig_t);
-          insert_mode = 0;
-        }
+
+        relocate_cursor(row, column);
+      }
+      else {
+        insert_mode = 0;
+        set_raw_mode(insert_mode);
+        break;
       }
     }
-    // if (insert_mode == 1) {
-    //   if (c == 37 && selected_i <= 0) {
-    //     selected_i -= 1;
-    //   }
-    //   else {
-    //     append(&kampad_f.buffer, c);
-    //   }
-    // }
-    // else if (c == (char)27 && insert_mode == 1) {
-    //   insert_mode = 0;
-    //   set_mode(insert_mode);
-    // }
-    
+    else if (insert_mode == 1) {
+      append(&kampad_f.buffer, c);
+      printf("%c", c);
+      fflush(stdout);
+      if (c == 10) {
+        row_t new_row = {
+          .index = kampad_f.buffer.rows.count,
+          .columns = 0,
+          .current_column = 0
+        };
+        push_v((void*)&new_row, &kampad_f.buffer.rows);
+      }
+      else {
+        column = selected_row->columns;
+      }
+    }
   }
+  // if (c == keymapping[1]) {
+  //     fprintf(kampad_f.fp, kampad_f.buffer.value);
+  // }
 
-  while ((c = gchar()) != keymapping[1] && c != keymapping[2]) {
-    printf("Wanna save changes?\n");
-  }
-
-  if (c == keymapping[1]) {
-      fprintf(kampad_f.fp, kampad_f.buffer.value);
-  }
-
+  printf("%s\n", kampad_f.buffer.value);
   fclose(kampad_f.fp);
   return 1;
 }

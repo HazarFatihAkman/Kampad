@@ -40,9 +40,5 @@ void preload_mode(flag_t flag, kampad_file_t *out) {
   else {
     //TODO : read file and set content to untouched buffer
   }
-
-  out->buffer.value = (char*) malloc(1024);
-  out->buffer.capacity = CAPACITY;
-  out->buffer.size = 0;
 } 
 

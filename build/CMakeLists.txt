@@ -12,6 +12,14 @@ add_executable(kampad ../app/main.c
   ../src/buffer.c
 )
 
+find_library(CDL_LIB cdl PATHS ../lib/cdl/)
+
+if (CDL_LIB)
+  target_link_libraries(kampad PRIVATE ${CDL_LIB})
+else()
+  message("CDL NOT FOUND!")
+endif()
+
 find_library(NCURSES_LIB ncurses PATHS /usr/include/)
 
 if (NCURSES_LIB)

@@ -3,6 +3,7 @@
 
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
  /home/hfa/Desktop/workspace/Kampad/app/main.c
+ /home/hfa/Desktop/workspace/Kampad/lib/cdl/listInterface.h
  /home/hfa/Desktop/workspace/Kampad/include/buffer.h
  /home/hfa/Desktop/workspace/Kampad/include/files.h
  /home/hfa/Desktop/workspace/Kampad/include/flags.h
@@ -95,6 +96,7 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o
 
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
  /home/hfa/Desktop/workspace/Kampad/src/buffer.c
+ /home/hfa/Desktop/workspace/Kampad/lib/cdl/listInterface.h
  /home/hfa/Desktop/workspace/Kampad/include/buffer.h
  /usr/include/alloca.h
  /usr/include/bits/atomic_wide_counter.h
@@ -109,6 +111,7 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
  /usr/include/bits/pthreadtypes.h
  /usr/include/bits/select.h
  /usr/include/bits/stdint-intn.h
+ /usr/include/bits/stdio_lim.h
  /usr/include/bits/stdlib-float.h
  /usr/include/bits/struct_mutex.h
  /usr/include/bits/struct_rwlock.h
@@ -116,10 +119,17 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
  /usr/include/bits/time64.h
  /usr/include/bits/timesize.h
  /usr/include/bits/types.h
+ /usr/include/bits/types/FILE.h
+ /usr/include/bits/types/__FILE.h
+ /usr/include/bits/types/__fpos64_t.h
+ /usr/include/bits/types/__fpos_t.h
+ /usr/include/bits/types/__mbstate_t.h
  /usr/include/bits/types/__sigset_t.h
  /usr/include/bits/types/clock_t.h
  /usr/include/bits/types/clockid_t.h
+ /usr/include/bits/types/cookie_io_functions_t.h
  /usr/include/bits/types/sigset_t.h
+ /usr/include/bits/types/struct_FILE.h
  /usr/include/bits/types/struct_timespec.h
  /usr/include/bits/types/struct_timeval.h
  /usr/include/bits/types/time_t.h
@@ -135,14 +145,17 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
  /usr/include/gnu/stubs-64.h
  /usr/include/gnu/stubs.h
  /usr/include/stdc-predef.h
+ /usr/include/stdio.h
  /usr/include/stdlib.h
  /usr/include/sys/cdefs.h
  /usr/include/sys/select.h
  /usr/include/sys/types.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h
 
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.o
  /home/hfa/Desktop/workspace/Kampad/src/files.c
+ /home/hfa/Desktop/workspace/Kampad/lib/cdl/listInterface.h
  /home/hfa/Desktop/workspace/Kampad/include/buffer.h
  /home/hfa/Desktop/workspace/Kampad/include/files.h
  /usr/include/bits/atomic_wide_counter.h
@@ -204,6 +217,7 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.o
 
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.o
  /home/hfa/Desktop/workspace/Kampad/src/flags.c
+ /home/hfa/Desktop/workspace/Kampad/lib/cdl/listInterface.h
  /home/hfa/Desktop/workspace/Kampad/include/buffer.h
  /home/hfa/Desktop/workspace/Kampad/include/files.h
  /home/hfa/Desktop/workspace/Kampad/include/flags.h
@@ -344,6 +358,7 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h
 
 kampad
+ /home/hfa/Desktop/workspace/Kampad/lib/cdl/libcdl.so
  /usr/lib/Scrt1.o
  /usr/lib/crti.o
  /usr/lib/crtn.o

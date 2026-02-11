@@ -1,5 +1,6 @@
 #include "../include/buffer.h"
 
+#include <stdio.h>
 #include <stdlib.h>
 
 void append(buffer_t *self, char c) {
@@ -13,7 +14,4 @@ void append(buffer_t *self, char c) {
   self->value[self->size] = '\0';
 }
 
-void remove_at(buffer_t *self, int index) {
-
-}
 

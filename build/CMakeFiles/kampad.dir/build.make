@@ -176,6 +176,7 @@ kampad: CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.o
 kampad: CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o
 kampad: CMakeFiles/kampad.dir/build.make
 kampad: CMakeFiles/kampad.dir/compiler_depend.ts
+kampad: /home/hfa/Desktop/workspace/Kampad/lib/cdl/libcdl.so
 kampad: /usr/lib/libncurses.so
 kampad: CMakeFiles/kampad.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hfa/Desktop/workspace/Kampad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable kampad"
