@@ -8,16 +8,12 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /home/hfa/Desktop/workspace/Kampad/include/flags.h \
   /home/hfa/Desktop/workspace/Kampad/include/input.h \
   /home/hfa/Desktop/workspace/Kampad/include/keymapping.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm/errno.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/confname.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
   /usr/include/bits/environments.h \
-  /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/getopt_core.h \
@@ -69,15 +65,11 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /usr/include/bits/unistd_ext.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
-  /usr/include/curses.h \
   /usr/include/endian.h \
-  /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
-  /usr/include/linux/errno.h \
-  /usr/include/ncurses_dll.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
@@ -86,10 +78,8 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o: /home/hfa/
   /usr/include/sys/ttydefaults.h \
   /usr/include/sys/types.h \
   /usr/include/termios.h \
-  /usr/include/unctrl.h \
   /usr/include/unistd.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
 
@@ -408,11 +398,11 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/keymapping.c.o:
 
 /usr/include/alloca.h:
 
+/home/hfa/Desktop/workspace/Kampad/src/buffer.c:
+
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/files.c.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
 
 /usr/include/bits/waitstatus.h:
 
@@ -432,15 +422,9 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/ncurses_dll.h:
-
 /usr/include/gnu/stubs-64.h:
 
 /usr/include/features.h:
-
-/home/hfa/Desktop/workspace/Kampad/src/buffer.c:
-
-/usr/include/curses.h:
 
 /usr/include/bits/wordsize.h:
 
@@ -452,19 +436,19 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 
 /usr/include/bits/typesizes.h:
 
-/usr/include/stdio.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/bits/types/struct_timespec.h:
+/usr/include/bits/termios-tcflow.h:
 
 /home/hfa/Desktop/workspace/Kampad/include/files.h:
 
 /home/hfa/Desktop/workspace/Kampad/src/files.c:
 
-/usr/include/unctrl.h:
-
 /usr/include/bits/stdint-intn.h:
+
+/usr/include/bits/struct_mutex.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/termios-c_iflag.h:
 
 /usr/include/bits/select.h:
 
@@ -478,27 +462,21 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/input.c.o:
 
 /home/hfa/Desktop/workspace/Kampad/app/main.c:
 
-/usr/include/bits/errno.h:
+/usr/include/bits/stdio_lim.h:
 
-/usr/include/sys/select.h:
-
-/usr/include/bits/environments.h:
-
-/usr/include/bits/endianness.h:
-
-/usr/include/bits/posix_opt.h:
-
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/bits/types/struct_timeval.h:
 
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/floatn.h:
 
+/usr/include/bits/posix_opt.h:
+
 /usr/include/bits/timesize.h:
 
 /usr/include/bits/endian.h:
 
-/usr/include/asm/errno.h:
+/usr/include/bits/types/__sigset_t.h:
 
 CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.o:
 
@@ -506,11 +484,11 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/flags.c.o:
 
 /home/hfa/Desktop/workspace/Kampad/lib/cdl/listInterface.h:
 
+/usr/include/bits/endianness.h:
+
 /usr/include/bits/getopt_posix.h:
 
 /usr/include/bits/thread-shared-types.h:
-
-/usr/include/linux/errno.h:
 
 /home/hfa/Desktop/workspace/Kampad/include/buffer.h:
 
@@ -528,12 +506,6 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o:
 
 /home/hfa/Desktop/workspace/Kampad/include/keymapping.h:
 
-/usr/include/asm-generic/errno.h:
-
-/usr/include/bits/types/__fpos_t.h:
-
-/usr/include/asm-generic/errno-base.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h:
@@ -542,31 +514,27 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/app/main.c.o:
 
 /usr/include/bits/confname.h:
 
+/usr/include/stdio.h:
+
+/usr/include/bits/types/timer_t.h:
+
 /usr/include/bits/byteswap.h:
 
 /usr/include/string.h:
 
 /usr/include/bits/time64.h:
 
-/usr/include/bits/types/struct_timeval.h:
+/usr/include/sys/select.h:
 
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/bits/struct_mutex.h:
-
-/usr/include/stdint.h:
-
-/usr/include/bits/termios-c_iflag.h:
-
-/usr/include/bits/termios-tcflow.h:
+/usr/include/bits/environments.h:
 
 /usr/include/stdlib.h:
 
 /usr/include/bits/termios-baud.h:
 
-/usr/include/bits/types/time_t.h:
-
 /usr/include/bits/struct_rwlock.h:
+
+/usr/include/bits/types/time_t.h:
 
 /usr/include/bits/termios-c_cc.h:
 
@@ -606,9 +574,9 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o:
 
 /usr/include/bits/types/__FILE.h:
 
-/usr/include/bits/types/clock_t.h:
+/usr/include/bits/types/__fpos_t.h:
 
-/usr/include/errno.h:
+/usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/atomic_wide_counter.h:
 
@@ -625,3 +593,5 @@ CMakeFiles/kampad.dir/home/hfa/Desktop/workspace/Kampad/src/buffer.c.o:
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/bits/types/struct_FILE.h:
+
+/usr/include/bits/types/struct_timespec.h:

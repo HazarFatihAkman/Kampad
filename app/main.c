@@ -3,11 +3,10 @@
 #include "../include/flags.h"
 #include "../include/files.h"
 
-#include <curses.h>
 #include <termios.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <errno.h>
+#include <stdint.h>
 
 char keymapping[KEYMAPPING_SIZE];
 flag_t flag = {0};
@@ -27,28 +26,44 @@ void set_raw_mode(int enable) {
   }
 }
 
-void relocate_cursor(int row, int column) {
+int relocate_cursor(int row, int column) {
   if ((row < 0 && row > kampad_f.buffer.rows.count)
     || column < 0) {
-    return;
+    return 0;
   }
 
-  if (kampad_f.buffer.current_row != row && row < kampad_f.buffer.rows.count) {
+  if (kampad_f.buffer.current_row != row) {
     kampad_f.buffer.current_row = row;
-    printf("\nrow %d\n", kampad_f.buffer.current_row);
+    printf("\nrow %d %d\n", kampad_f.buffer.current_row, row);
     fflush(stdout);
-    return;
+    return 1;
   }
 
   rows_t rows = kampad_f.buffer.rows;
   row_t *selected_row = (row_t*)rows.items[row];
-  if (selected_row->current_column != column && column < selected_row->current_column) {
+  if (selected_row->current_column != column && column < selected_row->columns) {
     selected_row->current_column = column;
-    printf("\ncolumn : %d\n", selected_row->current_column);
+    printf("\ncolumn : %d %d\n", selected_row->current_column, column);
     fflush(stdout);
     kampad_f.buffer.rows = rows;
-    return;
+    return 1;
   }
+
+  return 0;
+}
+
+void refresh_gui(buffer_t buffer) {
+  for (int i = 0; i < buffer.size; i++) {
+    row_t *row = (void*)buffer.rows.items[i];
+    if (buffer.current_row == row->index && row->current_column == i) {
+      printf("\033[7m%c\033[0m", buffer.value[i]); 
+    }
+    else {
+      printf("%c", buffer.value[i]);
+    }
+  }
+
+  fflush(stdout);
 }
 
 int main(int argv, const char *args[]) {
@@ -62,10 +77,10 @@ int main(int argv, const char *args[]) {
 
   uint8_t insert_mode = 0;
   char c;
-
   row_t *selected_row = {0};
   int row = 0;
   int column = 0;
+
   while(1) {
     c = gchar();
     if (c == 'i' && insert_mode == 0) {
@@ -76,6 +91,7 @@ int main(int argv, const char *args[]) {
           .columns = 0,
           .current_column = 0
       };
+
       push_v((void*)&new_row, &kampad_f.buffer.rows);
       selected_row = (row_t*)kampad_f.buffer.rows.items[kampad_f.buffer.current_row];
     }
@@ -83,14 +99,19 @@ int main(int argv, const char *args[]) {
       char seq[2];
       if (read(STDIN_FILENO, &seq[0], 1) == 1
        && read(STDIN_FILENO, &seq[1], 1) == 1) {
+        int temp_row = 0;
+        int temp_column = 0;
         switch (seq[1]) {
-          case 0x41: row = kampad_f.buffer.current_row + 1; break;
-          case 0x42: row = kampad_f.buffer.current_row - 1; break;
-          case 0x43: column = selected_row->current_column + 1; break;
-          case 0x44: column = selected_row->current_column - 1; break;
+          case 0x41: temp_row = row - 1; break;
+          case 0x42: temp_row = row + 1; break;
+          case 0x43: temp_column = column + 1; break;
+          case 0x44: temp_column = column - 1; break;
         }
 
-        relocate_cursor(row, column);
+        if (relocate_cursor(temp_row, temp_column) == 1) {
+          row = temp_row;
+          column = temp_column;
+        }
       }
       else {
         insert_mode = 0;
@@ -100,8 +121,6 @@ int main(int argv, const char *args[]) {
     }
     else if (insert_mode == 1) {
       append(&kampad_f.buffer, c);
-      printf("%c", c);
-      fflush(stdout);
       if (c == 10) {
         row_t new_row = {
           .index = kampad_f.buffer.rows.count,
@@ -109,51 +128,19 @@ int main(int argv, const char *args[]) {
           .current_column = 0
         };
         push_v((void*)&new_row, &kampad_f.buffer.rows);
+        row = new_row.index;
       }
       else {
-        column = selected_row->columns;
+        selected_row->columns++;
+        selected_row->current_column = selected_row->columns;
+        column = selected_row->current_column;
+        kampad_f.buffer.rows.items[row] = (void*)selected_row;
       }
-    }
-  }
-  // if (c == keymapping[1]) {
-  //     fprintf(kampad_f.fp, kampad_f.buffer.value);
-  // }
 
-  printf("%s\n", kampad_f.buffer.value);
+      refresh_gui(kampad_f.buffer);
+    }
+  } 
+
   fclose(kampad_f.fp);
   return 1;
 }
-
-//
-// int main() {
-//     const char *options[] = {"Open File", "Settings", "Exit"};
-//     int selected = 0;
-//     char ch;
-//
-//     set_mode(0);
-//
-//     while (1) {
-//         printf("\033[H\033[J"); 
-//         printf("--- MENU NAVIGATOR ---\n");
-//
-//         for (int i = 0; i < 3; i++) {
-//             if (i == selected) {
-//                 printf("\033[7m > %s \033[0m\n", options[i]);
-//             } else {
-//                 printf("   %s \n", options[i]);
-//             }
-//         }
-//
-//         ch = getchar();
-//
-//         if (ch == 'w' && selected > 0) selected--;
-//         if (ch == 's' && selected < 2) selected++;
-//         if (ch == '\n') break; 
-//         if (ch == 'q') break;
-//     }
-//
-//     set_mode(1);
-//     printf("\nSelected: %s\n", options[selected]);
-//
-//     return 0;
-// }
