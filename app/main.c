@@ -110,7 +110,15 @@ int main(int argv, const char *args[]) {
 
         if (relocate_cursor(temp_row, temp_column) == 1) {
           row = temp_row;
-          column = temp_column;
+  
+void switch_modes(char key, uint8_t insert_mode_enabled, struct termios t) {
+  if (key == keymapping[0] && insert_mode_enabled == 0) {
+    set_raw_mode(t, insert_mode_enabled);
+  }
+  else if (key == 27 && insert_mode_enabled == 1) {
+    
+  }
+}        column = temp_column;
         }
       }
       else {

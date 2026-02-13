@@ -1,13 +1,18 @@
 #ifndef KAMPAD_KEYMAPPING_H
 #define KAMPAD_KEYMAPPING_H
 
+#include "../include/terminal.h"
+
+#include <stdint.h>
+
 #define DELIMITER ':' 
 #define KEYMAPPING_FILE "keymap.gokturk"
-#define KEYMAPPING_SIZE 3
+#define KEYMAPPING_SIZE 4
 
 #define FOREACH_KEYMAP_FLAGS(KEYMAP_FLAGS) \
-  KEYMAP_FLAGS(QUIT)        \
-  KEYMAP_FLAGS(SAVE_FILE)   \
+  KEYMAP_FLAGS(INSERT_MODE)      \
+  KEYMAP_FLAGS(QUIT)             \
+  KEYMAP_FLAGS(SAVE_FILE)        \
   KEYMAP_FLAGS(DONT_SAVE_FILE)   \
 
 #define GENERATE_KEYMAP_FLAG(FLAG) FLAG,
@@ -22,7 +27,7 @@ static const char *KEYMAP_STRS[] = {
 };
 
 extern char keymapping[KEYMAPPING_SIZE];
-void set_keymapping(void);
+void init_keymapping(void);
 void print_keymapping(void);
 
 #endif // KAMPAD_KEYMAPPING_H

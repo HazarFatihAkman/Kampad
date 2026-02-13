@@ -1,0 +1,3 @@
+/home/hfa/Desktop/workspace/Kampad/test/tui/CMakeFiles/tui.dir
+/home/hfa/Desktop/workspace/Kampad/test/tui/CMakeFiles/edit_cache.dir
+/home/hfa/Desktop/workspace/Kampad/test/tui/CMakeFiles/rebuild_cache.dir

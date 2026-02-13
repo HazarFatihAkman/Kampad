@@ -1,8 +1,4 @@
->> -c = create_flag
-
->> ./kampad -c [new_filename]
-
->> if not -c flag, open file
->> ./kampad [filename]
-
-
+>>-- rows->row->buffer
+>>-- terminal mode - refresh ui
+>> read file if it's not exists don't create until the user want
+>> start read mode default insert mode

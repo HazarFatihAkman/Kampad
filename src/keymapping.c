@@ -2,7 +2,7 @@
 
 #include <stdio.h> 
 
-void set_keymapping(void) {
+void init_keymapping(void) {
   FILE *fptr;
   fptr = fopen(KEYMAPPING_FILE, "r");
 
@@ -26,4 +26,5 @@ void print_keymapping(void) {
     }
   }
 }
+
 
