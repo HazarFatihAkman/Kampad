@@ -12,7 +12,7 @@ uint8_t set_raw_mode(const struct termios t, const uint8_t enabled);
 
 // body
 // path | total size | modify at | created at | navigations 
-uint8_t refresh_tui(rows_t rows);
+void refresh_tui(line_t current_line, rows_t rows, uint8_t insert_mode_enabled);
 char gchar();
 
 #endif // KAMPAD_TERMINAL_H

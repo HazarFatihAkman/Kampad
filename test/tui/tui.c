@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <string.h>
 #include <termios.h>
 #include <unistd.h>
 
@@ -17,53 +18,43 @@ rows_t rows = {0};
 
 int main(int argv, char *args[]) {
   init_keymapping();
-  print_keymapping();
   tcgetattr(STDIN_FILENO, &t);
-
-  line.value = (char*) malloc(1024);
+  print_keymapping();
+  line.value = (char*) malloc(DBUFFER_SIZE);
   line.size = 0;
   if (line.value == NULL) return 1;
 
   rows.count = 0;
   char input;
-  while (1) {
-    input = gchar();
+  while ((input = gchar()) != keymapping[1] || insert_mode_enabled == 1) {
     if ((input == keymapping[0] && insert_mode_enabled == 0)
      || (input == 27 && insert_mode_enabled == 1)) {
       insert_mode_enabled = input == keymapping[0];
       set_raw_mode(t, insert_mode_enabled);
     }
-    else {
-      if (input == '\n') {
-        line.value[line.size] = input;
-        line.size++;
-        line.value[line.size] = '\0';
-        line.value = (char*) realloc(line.value, line.size);
-        if (line.value == NULL) break;
+    else if (insert_mode_enabled) {
+      if (input == 10 || input == 13) {
+        line_t *saved_line = (line_t*) malloc(sizeof(line_t));
+        saved_line->size = line.size;
+        saved_line->value = (char*) malloc(line.size + 1);
+        memcpy(saved_line->value, line.value, line.size);
+        saved_line->value[line.size] = '\0';
+        push_row(*saved_line, &rows);
 
-        push_row(line, &rows); 
-
-        line_t new_line = {0};
-        new_line.value = (char*) malloc(1024);
-        new_line.size = 0;
-        if (new_line.value == NULL) return 1;
-
-        line = new_line; 
+        line.size = 0;
+        free(saved_line);
+        saved_line = NULL;
       }
       else {
         line.value[line.size] = input;
         line.size++;
-
-        printf("\r\033[2K");
-        for (int i = 0; i < rows.count; i++) {
-          line_t *line_ptr = (line_t*)rows.items[i];
-          printf("%s", line_ptr->value);
+        if (line.size % DBUFFER_SIZE == 0) {
+          line.value = (char*)realloc(line.value, 2*DBUFFER_SIZE);
         }
-
-        printf("%s", line.value);
-        fflush(stdout);
       }
     }
+
+    refresh_tui(line, rows, insert_mode_enabled); 
   }
 
   return 0;

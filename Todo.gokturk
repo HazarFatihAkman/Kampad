@@ -1,4 +1,5 @@
 >>-- rows->row->buffer
 >>-- terminal mode - refresh ui
+>> push_row is broken. fix it. there's null data push into list, idk why 
 >> read file if it's not exists don't create until the user want
 >> start read mode default insert mode
