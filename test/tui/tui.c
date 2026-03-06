@@ -18,8 +18,10 @@ rows_t rows = {0};
 
 int main(int argv, char *args[]) {
   init_keymapping();
-  tcgetattr(STDIN_FILENO, &t);
-  print_keymapping();
+  tcgetattr(STDIN_FILENO, &t); 
+  write(STDOUT_FILENO, "\x1b[2J\x1b[H", 7);
+  print_keymapping(insert_mode_enabled);
+
   line.value = (char*) malloc(DBUFFER_SIZE);
   line.size = 0;
   if (line.value == NULL) return 1;
@@ -55,6 +57,9 @@ int main(int argv, char *args[]) {
     }
 
     refresh_tui(line, rows, insert_mode_enabled); 
+    // write(STDOUT_FILENO, "\x1b[2J", 4);
+    // write(STDOUT_FILENO, test_buffer, strlen(test_buffer));
+    // fsync(STDIN_FILENO);
   }
 
   return 0;

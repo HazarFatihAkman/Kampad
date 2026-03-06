@@ -28,7 +28,7 @@ static const char *KEYMAP_STRS[] = {
 
 extern char keymapping[KEYMAPPING_SIZE];
 void init_keymapping(void);
-void print_keymapping(void);
+void print_keymapping(uint8_t insert_mode_enabled);
 
 #endif // KAMPAD_KEYMAPPING_H
 

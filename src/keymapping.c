@@ -31,11 +31,14 @@ void init_keymapping(void) {
   }
 }
 
-void print_keymapping(void) {
+void print_keymapping(uint8_t insert_mode_enabled) {
   for (int i = 0; i < KEYMAPPING_SIZE; i++) {
     write(STDOUT_FILENO, keymapping_formatted[i], strlen(keymapping_formatted[i])); 
   }
 
+  if (insert_mode_enabled) {
+    write(STDOUT_FILENO, "mode enabled", 12);
+  }
   write(STDOUT_FILENO, "\r\n", 2);
 }
 

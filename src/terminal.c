@@ -9,8 +9,9 @@
 uint8_t set_raw_mode(const struct termios t, const uint8_t enabled) {
   if (enabled == 1) {
     struct termios raw = t;
-    raw.c_lflag &= ~(ICANON | ECHO);
+    raw.c_lflag &= ~(ICANON | ECHO | IEXTEN | ISIG);
     raw.c_oflag &= ~(OPOST);
+    raw.c_iflag &= ~(ICRNL | IXON);
     raw.c_cc[VMIN] = 1;
     raw.c_cc[VTIME] = 0;
     tcsetattr(STDIN_FILENO, TCSANOW, &raw);
@@ -25,18 +26,14 @@ uint8_t set_raw_mode(const struct termios t, const uint8_t enabled) {
 
 void refresh_tui(line_t current_line, rows_t rows, uint8_t insert_mode_enabled) {
   write(STDOUT_FILENO, "\x1b[2J\x1b[H", 7);
-  print_keymapping();
+  print_keymapping(insert_mode_enabled);
 
-  printf("rows");
-  printf("%zu\n", rows.count);
   for (int i = 0; i < rows.count; i++) {
     line_t *line_ptr = (line_t*)rows.items[i];
-    printf("line_ptr_size : %zu\n", line_ptr->size);
     write(STDOUT_FILENO, line_ptr->value, line_ptr->size);
     write(STDOUT_FILENO, "\r\n", 2);
   }
 
-  printf("line size : %zu\n", current_line.size);
   write(STDOUT_FILENO, current_line.value, current_line.size);
   fsync(STDIN_FILENO);
 }
